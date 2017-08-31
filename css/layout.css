@@ -6,7 +6,6 @@ article{
     position: relative;
     z-index: 20;
 
-    background-color: #fff;
 }
 
 .list{
@@ -16,6 +15,6 @@ article{
     width: 82.5vw;
     min-width: 40rem;
     white-space: nowrap;
-    overflow-x: scroll;
+    overflow-x: hidden;
     z-index: 10;
 }
