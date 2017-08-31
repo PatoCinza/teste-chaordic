@@ -23,7 +23,7 @@ function buildRecomm(recomm) {
         txt += '<p>'+ (recomm[i].name).substring(0, 99) +'... </p>';
         if(recomm[i].oldPrice)
             txt += '<p> De: '+recomm[i].oldPrice+'</p>';
-        txt += '<p class="t-font-red">Por: '+recomm[i].price+ ' ' + recomm[i].productInfo.paymentConditions + '</p>';
+        txt += '<p class="t-font-red">Por: '+recomm[i].price+ ' ' + recomm[i].productInfo.paymentConditions.replace(".", ",") + '</p>';
         txt += '</article>';
     }
 
@@ -59,7 +59,7 @@ function nextPage() {
         clearInterval(id);
         page++;
       } else {
-        currentPosition--; 
+        currentPosition-= 0.5; 
         element.style.transform = 'translateX(' + currentPosition + 'vw)'; 
         element.style.WebkitTransform = 'translateX(' + currentPosition + 'vw)'; 
         element.style.msTransform = 'translateX(' + currentPosition + 'vw)'; 
@@ -79,7 +79,7 @@ function previousPage() {
         clearInterval(id);
         page--;
       } else {
-        currentPosition++; 
+        currentPosition+=0.5; 
         element.style.transform = 'translateX(' + currentPosition + 'vw)'; 
         element.style.WebkitTransform = 'translateX(' + currentPosition + 'vw)'; 
         element.style.msTransform = 'translateX(' + currentPosition + 'vw)'; 
