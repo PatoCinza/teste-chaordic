@@ -21,7 +21,12 @@ article:hover{
     color: red;
 }
 
-.header-bg {
-    background-color: red;
+.t-header {
+    background-color: #e7f2fc;
+    color: #556699;
+}
+
+.t-reference {
+    border-right: 1px solid #e9e9e9;
 }
 
