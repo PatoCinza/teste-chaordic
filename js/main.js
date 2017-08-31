@@ -11,13 +11,14 @@ function X(data) { //callback
     var recommendation = data.data.recommendation;
     buildReference(reference);
     buildRecomm(recommendation);
+    maxPage = recommendation.length - 4; // minus visible items in page
 }
 
 function buildRecomm(recomm) {
     var txt = "";
     for (var i = 0; i < recomm.length; i++) {
         txt += '<article>';
-        txt += '<img src="http:' + recomm[i].imageName + '" alt="reference">';
+        txt += '<img src="http:' + recomm[i].imageName + '" alt="recommendation">';
         var name = (recomm[i].name);
         txt += '<p>'+ (recomm[i].name).substring(0, 99) +'... </p>';
         if(recomm[i].oldPrice)
@@ -43,7 +44,12 @@ function buildReference(ref) {
 
 }
 
+var page = 1;
+var maxPage;
+
 function nextPage() {
+    if(page >= maxPage)
+        return;
     var element = document.getElementById('list'); 
     var currentPosition = parseFloat(element.style.transform.replace(/[^0-9\.\-]+/g, ""));
     var finalPosition = currentPosition + (-17.5);
@@ -51,6 +57,7 @@ function nextPage() {
     function frame() {
       if (currentPosition <= finalPosition) {
         clearInterval(id);
+        page++;
       } else {
         currentPosition--; 
         element.style.transform = 'translateX(' + currentPosition + 'vw)'; 
@@ -61,6 +68,8 @@ function nextPage() {
 }
 
 function previousPage() {
+    if(page <= 1)
+        return;
     var element = document.getElementById('list');
     var currentPosition = parseFloat(element.style.transform.replace(/[^0-9\.\-]+/g, ""));
     var finalPosition = currentPosition + (17.5);
@@ -68,6 +77,7 @@ function previousPage() {
     function frame() {
       if (currentPosition >= finalPosition) {
         clearInterval(id);
+        page--;
       } else {
         currentPosition++; 
         element.style.transform = 'translateX(' + currentPosition + 'vw)'; 

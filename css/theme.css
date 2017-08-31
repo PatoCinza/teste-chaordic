@@ -13,7 +13,7 @@ article p{
 }
 
 article:hover{
-    background: linear-gradient(blue,transparent);
+    background: linear-gradient(#e7f2fc,transparent);
     
 }
 
