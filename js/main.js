@@ -52,7 +52,7 @@ function nextPage() {
         return;
     var element = document.getElementById('list'); 
     var currentPosition = parseFloat(element.style.transform.replace(/[^0-9\.\-]+/g, ""));
-    var finalPosition = currentPosition + (-17.5);
+    var finalPosition = currentPosition + (-17);
     var id = setInterval(frame, 5);
     function frame() {
       if (currentPosition <= finalPosition) {
@@ -72,7 +72,7 @@ function previousPage() {
         return;
     var element = document.getElementById('list');
     var currentPosition = parseFloat(element.style.transform.replace(/[^0-9\.\-]+/g, ""));
-    var finalPosition = currentPosition + (17.5);
+    var finalPosition = currentPosition + (17);
     var id = setInterval(frame, 5);
     function frame() {
       if (currentPosition >= finalPosition) {
