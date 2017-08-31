@@ -1,0 +1,21 @@
+article{
+    width: 17vw;
+    min-width: 8rem;
+    height: 15em;
+    display: inline-block;
+    position: relative;
+    z-index: 20;
+
+    background-color: #fff;
+}
+
+.list{
+    position: relative;
+    top: 2em;
+    left: 17.5vw;
+    width: 82.5vw;
+    min-width: 40rem;
+    white-space: nowrap;
+    overflow-x: scroll;
+    z-index: 10;
+}

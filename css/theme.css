@@ -1,0 +1,21 @@
+
+article img{
+    width: 80%;
+    margin: 5% 10% 5% 10%;
+    background-color: #fff;
+}
+article p{
+    white-space: normal;
+    margin: 0 5% 0 5%;
+}
+
+article:hover{
+    background: linear-gradient(blue,transparent);
+    
+}
+
+
+.header-bg {
+    background-color: red;
+}
+
