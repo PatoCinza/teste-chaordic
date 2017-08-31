@@ -25,7 +25,6 @@
     height: 17em;
     border-right: 2px solid aqua;
     border-radius: 0.5em;
-    overflow: hidden;
     background: linear-gradient(to right, rgba(255,255,255,0) 90%, rgb(255,255,255));
     z-index: 50;
 }
