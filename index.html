@@ -5,12 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vitrine da alegria</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/module.css">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
 </head>
 <body>
-    <header>
-    </header>
-    <main>
-    </main>
+    <section class="main">       
+        <div class="box-header">
+            <div class="header t-header">
+                <div class="col w-left">
+                    <span>Você Visitou:</span>
+                </div>
+                <div class="col">
+                        <span>e talvez se interesse por:</span>                       
+                </div>
+            </div>
+            <div id="reference" class="box-products t-reference">
+            </div>
+        </div>
+        <div class="arrow-previous" onclick="previousPage()">
+                <img src="img/arrowOnLeft.png" alt="próxima página">
+            </div>
+        <div class="arrow-next" onclick="nextPage()">
+            <img src="img/arrowOnRight.png" alt="próxima página">
+        </div>
+        <div class="blur"></div>
+        
+        <div class="l-list">
+        <div id="list" style="transform: translate(0vw);">
+        </div>
+        </div>
+    </section>
 
     <script type="text/javascript" src="js/main.js"></script>
 </body>
