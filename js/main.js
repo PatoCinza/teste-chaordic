@@ -11,7 +11,7 @@ function X(data) { //callback
     var recommendation = data.data.recommendation;
     buildReference(reference);
     buildRecomm(recommendation);
-    maxPage = recommendation.length - 4; // minus visible items in page
+    maxPage = recommendation.length - 3; // minus visible items in page - 1 (to show last)
 }
 
 function buildRecomm(recomm) {
