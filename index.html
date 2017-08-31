@@ -28,12 +28,15 @@
                 </article>
             </div>
         </div>
-        <div class="arrow-next">
-            <img src="img/arrowOn.png" alt="próxima página">
+        <div class="arrow-previous" onclick="previousPage()">
+                <img src="img/arrowOnLeft.png" alt="próxima página">
+            </div>
+        <div class="arrow-next" onclick="nextPage()">
+            <img src="img/arrowOnRight.png" alt="próxima página">
         </div>
         <div class="blur"></div>
         
-        <div class="list">
+        <div id="list" class="list" style="left: 17.5vw;"> <!-- Style will be used by javascript to paginate -->
             <article>
                 <img src="image.png" alt="img">
                 <p>texto texto textotexto texto textotexto texto textotexto texto textotexto</p>  
